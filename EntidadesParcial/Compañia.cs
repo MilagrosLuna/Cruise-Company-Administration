@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EntidadesParcial
 {
     public static class Compañia
-    {   
+    {
         public static List<int> listaPesosValija = new List<int> { 1, 2, 3, 4, 5 ,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25};
         public static List<ViajeExtraRegionales> viajesExtraRegionales;
         public static List<ViajeRegionales> viajesRegionales;
@@ -15,6 +15,8 @@ namespace EntidadesParcial
         private static float precioPremiumRegional = precioTuristaRegional + (precioTuristaRegional * 20 / 100);
         private static float precioTuristaExtraRegional = 120;
         private static float precioPremiumExtraRegional = precioTuristaExtraRegional + (precioTuristaExtraRegional * 20 / 100);
+
+        //public static List<Viaje> viajes;
         public static List<Crucero> embarcaciones;
 
         #region propiedades 
@@ -35,6 +37,7 @@ namespace EntidadesParcial
             get { return precioPremiumExtraRegional; }
         }
         #endregion
+
 
         static Compañia()
         {
@@ -76,6 +79,10 @@ namespace EntidadesParcial
             {
                 viajeRegional01.AgregarPasajero(item);
             }
+
+
+
+
 
 
 
@@ -167,7 +174,7 @@ namespace EntidadesParcial
             #endregion
 
         }
-
+       
         /// <summary>
         /// metodo para harcodear pasajeros en un viaje 
         /// </summary>

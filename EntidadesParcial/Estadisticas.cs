@@ -176,7 +176,7 @@ namespace EntidadesParcial
             #endregion
 
 
-        }
+            }
 
         /// <summary>
         /// metodo para harcodear pasajeros en un viaje 

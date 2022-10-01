@@ -155,12 +155,12 @@ namespace EntidadesParcial
                 if(this.embarcacion.CapacidadPasajerosActual > 0)
                 {
                     this.embarcacion.CapacidadPasajerosActual = this.embarcacion.CapacidadPasajerosActual - 1;
-                    this.pasajeros.Add(pasajero);
-                    foreach (Bolsos item in pasajero.Equipajes)
-                    {
-                        this.embarcacion.CapacidadBodegaActual -= item.Peso;
-                    }
-                }          
+                this.pasajeros.Add(pasajero);
+                foreach (Bolsos item in pasajero.Equipajes)
+                {
+                    this.embarcacion.CapacidadBodegaActual -= item.Peso;
+                }
+            }
             }
             return ok;
         }

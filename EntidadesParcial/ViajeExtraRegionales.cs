@@ -22,7 +22,7 @@ namespace EntidadesParcial
             }
         }
 
-
+       
         #region propiedades
         public DateTime LLegada
         {
@@ -34,6 +34,7 @@ namespace EntidadesParcial
             get { return destinoExtraRegional; }
         }
         #endregion
+
 
         public override string Mostrar()
         {

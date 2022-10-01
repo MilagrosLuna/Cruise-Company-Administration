@@ -43,6 +43,8 @@ namespace EntidadesParcial
             }
         }
 
+
+
         public List<Bolsos> Equipajes
         {
             get { return equipajes; }
@@ -132,9 +134,9 @@ namespace EntidadesParcial
             if(pasajero1 is not null && pasajero2 is not null)
             {
                 if (pasajero1.cliente.NumeroDelPasaporte == pasajero2.cliente.NumeroDelPasaporte)
-                {
-                    rta = true;
-                }
+            {
+                rta = true;
+            }
             }
             return rta;
         }

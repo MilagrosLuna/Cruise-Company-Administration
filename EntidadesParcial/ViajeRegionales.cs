@@ -9,7 +9,7 @@ namespace EntidadesParcial
     public class ViajeRegionales : Viaje
     {
         private Regionales destinoRegional;
-     
+       
         public ViajeRegionales(Regionales destino,DateTime fecha, Crucero c1, int camarotesPremium, int camarotesTurista, float precioPremium, float precioTurista) : base(fecha, c1, camarotesPremium, camarotesTurista)
         {
             if (precioPremium > 0 && precioTurista > 0)
@@ -33,6 +33,7 @@ namespace EntidadesParcial
             get { return destinoRegional; }
         }
         #endregion
+
 
         public override string Mostrar()
         {

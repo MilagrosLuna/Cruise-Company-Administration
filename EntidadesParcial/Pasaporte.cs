@@ -12,7 +12,7 @@ namespace EntidadesParcial
         private DateTime fechaExp;
         private int numeroPasaporte;
         private Nacionalidad nacionalidad;
-
+    
         #region propiedades
         public int NumeroPasaporte
         {
