@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesParcial", "EntidadesParcial\EntidadesParcial.csproj", "{13022A96-DDD1-4D10-9CAB-177D9DDAEB6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmParcial", "FrmParcial\FrmParcial.csproj", "{3DF0EA00-7016-421D-9DA3-8072D51AF3F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13022A96-DDD1-4D10-9CAB-177D9DDAEB6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13022A96-DDD1-4D10-9CAB-177D9DDAEB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13022A96-DDD1-4D10-9CAB-177D9DDAEB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13022A96-DDD1-4D10-9CAB-177D9DDAEB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF0EA00-7016-421D-9DA3-8072D51AF3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF0EA00-7016-421D-9DA3-8072D51AF3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF0EA00-7016-421D-9DA3-8072D51AF3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF0EA00-7016-421D-9DA3-8072D51AF3F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {000C58E1-63A6-4B35-8654-056AA40C56AF}
+	EndGlobalSection
+EndGlobal
