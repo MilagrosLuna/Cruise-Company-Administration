@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EntidadesParcial.Camarote">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Camarote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntidadesParcial.Crucero">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQAQAAQBAAQACACEAIBAAAAIQAAAAAAICAAEABAAAAA=</HashCode>
+      <FileName>Crucero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntidadesParcial.Pasajero">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAEwAAAAAAAgAAAAIAAAIEAAAAAAiA=</HashCode>
+      <FileName>Pasajero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntidadesParcial.Pasaporte">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQAAAAFAAAAAAAAAQAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pasaporte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntidadesParcial.User">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAgAACgAAAAAAAAIQAAAAEAAAAAiA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntidadesParcial.Viaje">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="EntidadesParcial.Viaje.PuertoPartida" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Viaje.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAAAQIAAMIQgAAAEIAADRAQAAEAEAABAAAAAgAAAAAA=</HashCode>
+      <FileName>Viaje.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntidadesParcial.ViajeExtraRegionales">
+    <Position X="0.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAQAAAAEgAAAAAAAAAAAAIAAAAAAAAgQAiA=</HashCode>
+      <FileName>ViajeExtraRegionales.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntidadesParcial.ViajeRegionales">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAEgAAAAAAABAAAAIQAAAAAAAgAAiA=</HashCode>
+      <FileName>ViajeRegionales.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Equipaje">
+    <Position X="9.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAQACAAA=</HashCode>
+      <FileName>Equipaje.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ExtraRegionales">
+    <Position X="11.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAICABAAAAAAAAAAAAACEEAAAAAAAIAAAA=</HashCode>
+      <FileName>ExtraRegionales.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Regionales">
+    <Position X="13.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAAAAAAAABAAAAAGEAAAIAAAIAAQAAAAAAAIAAAA=</HashCode>
+      <FileName>Regionales.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
