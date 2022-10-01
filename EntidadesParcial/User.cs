@@ -11,11 +11,17 @@ namespace EntidadesParcial
         private string usuario;
         private string contraseña;
 
+        #region propiedad
         public override string NombreCompeto
         {
             get { return this.nombre + " " + this.apellido + " | es: " + this.usuario; }
         }
-
+        #endregion
+        /// <summary>
+        /// constructor parametrizado basico de user
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="contraseña"></param>
         public User(string usuario, string contraseña):base("","",1,Sexo.NoCargado)
         {
             if (usuario is not null && contraseña is not null)
@@ -24,7 +30,15 @@ namespace EntidadesParcial
                 this.contraseña = contraseña;
             }
         }
-
+        /// <summary>
+        /// cosntructor parametrizado completo de user
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="contraseña"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="edad"></param>
+        /// <param name="genero"></param>
         public User(string usuario, string contraseña,string nombre, string apellido, int edad, Sexo genero) : base(nombre, apellido, edad, genero)
         {
             if(usuario is not null && contraseña is not null)
@@ -33,7 +47,7 @@ namespace EntidadesParcial
                 this.contraseña = contraseña;
             }
         }
-
+        #region propiedades
         public string Usuario
         {
             get { return this.usuario; }
@@ -42,8 +56,13 @@ namespace EntidadesParcial
         {
             get { return this.nombre; }
         }
-
-
+        #endregion
+        /// <summary>
+        /// sobrecarga del == compara el usuario y la contraseña
+        /// </summary>
+        /// <param name="t1"></param>
+        /// <param name="t2"></param>
+        /// <returns></returns>
         public static bool operator ==(User t1, User t2)
         {
             bool rta = false;

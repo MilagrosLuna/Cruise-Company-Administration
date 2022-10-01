@@ -8,17 +8,26 @@ namespace EntidadesParcial
 {
     public class Camarote
     {
-        private int capacidad;
+        /// <summary>
+        /// clase camarote creada para cruceros 
+        /// que tienen cierta cantidad pero a la vez 
+        /// todos los camarotes tienen capacidad para 4 personas
+        /// </summary>
+        private static int capacidad;
 
+        /// <summary>
+        /// constructor del camarote
+        /// </summary>
         public Camarote()
         {
             capacidad = 4;
         }
-
-        public int Capacidad
+        /// <summary>
+        /// propiedad que devulve la capacidad 
+        /// </summary>
+        public static int Capacidad
         {
-            get { return capacidad; }
-            set { capacidad = value; }
+            get { return Camarote.capacidad; }
         }
 
     }

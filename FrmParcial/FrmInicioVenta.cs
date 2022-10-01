@@ -55,5 +55,10 @@ namespace FrmParcial
         {
             return radioButton_regional.Checked;
         }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("seleccione los datos para el pasajero", "ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

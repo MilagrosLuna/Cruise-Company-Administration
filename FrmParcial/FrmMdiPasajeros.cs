@@ -41,5 +41,10 @@ namespace FrmParcial
             }
             
         }
+
+        private void button_ayuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("seleccione un viaje y luego pulse \n el boton ver pasajeros", "ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

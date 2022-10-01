@@ -102,6 +102,7 @@ namespace FrmParcial
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 575);
             this.Name = "FrmPasajePremium";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPasajePremium";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

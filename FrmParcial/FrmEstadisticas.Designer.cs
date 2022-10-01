@@ -37,6 +37,7 @@ namespace FrmParcial
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmEstadisticas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEstadisticas";
             this.ResumeLayout(false);
 

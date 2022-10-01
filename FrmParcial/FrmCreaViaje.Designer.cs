@@ -31,6 +31,7 @@ namespace FrmParcial
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox_seleccionarDestino = new System.Windows.Forms.GroupBox();
+            this.button_ayuda = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_verDestinos = new System.Windows.Forms.Button();
             this.radioButton_extraRegional = new System.Windows.Forms.RadioButton();
@@ -67,6 +68,7 @@ namespace FrmParcial
             // 
             // groupBox_seleccionarDestino
             // 
+            this.groupBox_seleccionarDestino.Controls.Add(this.button_ayuda);
             this.groupBox_seleccionarDestino.Controls.Add(this.pictureBox1);
             this.groupBox_seleccionarDestino.Controls.Add(this.button_verDestinos);
             this.groupBox_seleccionarDestino.Controls.Add(this.radioButton_extraRegional);
@@ -78,6 +80,19 @@ namespace FrmParcial
             this.groupBox_seleccionarDestino.TabIndex = 0;
             this.groupBox_seleccionarDestino.TabStop = false;
             this.groupBox_seleccionarDestino.Text = "Ver Destinos";
+            // 
+            // button_ayuda
+            // 
+            this.button_ayuda.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button_ayuda.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_ayuda.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_ayuda.Location = new System.Drawing.Point(785, 62);
+            this.button_ayuda.Name = "button_ayuda";
+            this.button_ayuda.Size = new System.Drawing.Size(90, 46);
+            this.button_ayuda.TabIndex = 4;
+            this.button_ayuda.Text = "Ayuda";
+            this.button_ayuda.UseVisualStyleBackColor = false;
+            this.button_ayuda.Click += new System.EventHandler(this.button_ayuda_Click);
             // 
             // pictureBox1
             // 
@@ -212,6 +227,7 @@ namespace FrmParcial
             this.ClientSize = new System.Drawing.Size(1313, 336);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmCreaViaje";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCreaViaje";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox_seleccionarDestino.ResumeLayout(false);
@@ -239,5 +255,6 @@ namespace FrmParcial
         private System.Windows.Forms.Label label_destino;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox_seleccionarDestino;
+        private System.Windows.Forms.Button button_ayuda;
     }
 }

@@ -10,12 +10,12 @@ namespace EntidadesParcial
 {
     public class Pasajero
     {
+
         private List<Bolsos> equipajes;  // clase Bolsos
         private TipoPasajero clase;
         private Cliente cliente;
 
-
-
+        #region propiedades
         public TipoPasajero Clase
         {
             get { return clase; }
@@ -43,14 +43,16 @@ namespace EntidadesParcial
             }
         }
 
-
-
         public List<Bolsos> Equipajes
         {
             get { return equipajes; }
         }
 
+        #endregion
 
+        /// <summary>
+        /// constructor base del pasajero
+        /// </summary>
         private Pasajero()
         {
             this.equipajes = new List<Bolsos>();
@@ -59,6 +61,11 @@ namespace EntidadesParcial
             this.cliente = new Cliente("", "", p1, 0, Sexo.NoCargado);
 
         }
+        /// <summary>
+        /// constructor parametrizado
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <param name="clase"></param>
         public Pasajero(Cliente cliente, TipoPasajero clase) : this()
         {
             this.clase = clase;
@@ -66,7 +73,12 @@ namespace EntidadesParcial
             this.cliente.EnViaje = true;
         }
         
-
+        /// <summary>
+        /// sobrecarga del operador +, que permite agregar un bolso a la lista de bolsos q tiene el pasajero
+        /// </summary>
+        /// <param name="pasajero"></param>
+        /// <param name="bolso"></param>
+        /// <returns></returns>
         public static Pasajero operator +(Pasajero pasajero, Bolsos bolso)
         {
             if(bolso is not null && pasajero is not null)
@@ -77,7 +89,10 @@ namespace EntidadesParcial
         }
 
 
-
+        /// <summary>
+        /// mostrar informacion del pasajero
+        /// </summary>
+        /// <returns></returns>
         private string Mostrar()
         {
             StringBuilder cadena = new StringBuilder();
@@ -96,21 +111,30 @@ namespace EntidadesParcial
 
             return cadena.ToString();
         }
-    
+        /// <summary>
+        /// sobrecarga del to string mostrando informacion del pasajero
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return this.Mostrar();
         }
 
-
-
-
+        /// <summary>
+        /// sobrecarga del == para comparar 2 pasajeros, compara por numero de pasaporte
+        /// </summary>
+        /// <param name="pasajero1"></param>
+        /// <param name="pasajero2"></param>
+        /// <returns></returns>
         public static bool operator ==(Pasajero pasajero1, Pasajero pasajero2)
         {
             bool rta = false;
-            if (pasajero1.cliente.NumeroDelPasaporte==pasajero2.cliente.NumeroDelPasaporte)
+            if(pasajero1 is not null && pasajero2 is not null)
             {
-                rta = true;
+                if (pasajero1.cliente.NumeroDelPasaporte == pasajero2.cliente.NumeroDelPasaporte)
+                {
+                    rta = true;
+                }
             }
             return rta;
         }
@@ -118,7 +142,11 @@ namespace EntidadesParcial
         {
             return !(pasajero1 == pasajero2);
         }
-
+        /// <summary>
+        /// sobrecarga del equals para q compare en base a lo q yo quiero, uso el == por pasaporte
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             bool ok = false;

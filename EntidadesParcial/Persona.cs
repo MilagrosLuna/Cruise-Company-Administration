@@ -12,7 +12,9 @@ namespace EntidadesParcial
         protected string apellido;
         protected int edad;
         protected Sexo genero;
-
+        /// <summary>
+        /// constructor base de persona
+        /// </summary>
         private Persona()
         {
             this.nombre = "";
@@ -20,12 +22,20 @@ namespace EntidadesParcial
             this.edad = 0;
             this.genero = Sexo.NoCargado;
         }
-
+        /// <summary>
+        /// propiedad abstracta, user y cliente muestran distintas cosas en nombre completo
+        /// </summary>
         public abstract string NombreCompeto
         {
             get;
         }
-
+        /// <summary>
+        /// constructor parametrizado
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="edad"></param>
+        /// <param name="genero"></param>
         protected Persona(string nombre,string apellido,int edad, Sexo genero) : this()
         {
             if(nombre is not null && apellido is not null && edad>0 && genero != Sexo.NoCargado)
@@ -36,6 +46,10 @@ namespace EntidadesParcial
                 this.genero = genero;
             }    
         }
+        /// <summary>
+        /// mostrar datos basicos de persona
+        /// </summary>
+        /// <returns></returns>
         protected string Mostrar()
         {
             StringBuilder cadena = new StringBuilder();

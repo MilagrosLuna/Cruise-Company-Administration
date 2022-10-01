@@ -123,6 +123,7 @@ namespace FrmParcial
             this.ClientSize = new System.Drawing.Size(1293, 656);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmViajesDisponibles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmViajesDisponibles";
             this.Load += new System.EventHandler(this.FrmViajesDisponibles_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

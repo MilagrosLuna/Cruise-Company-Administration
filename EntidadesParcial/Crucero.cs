@@ -16,7 +16,7 @@ namespace EntidadesParcial
         private static int capacidadBodega;//(en kilogramos).
         private int cantidadCamarotes;
         private int capacidadBodegaActual;
-
+        private int capacidadPasajerosActual;
         private bool enViaje;
         private ESiNo pileta;
         private ESiNo gimnasio;
@@ -28,6 +28,7 @@ namespace EntidadesParcial
             Crucero.capacidadBodega = 10000;
         }
 
+        #region propiedades
         public int CapacidadBodegaActual
         {
             get { return this.capacidadBodegaActual; }
@@ -36,7 +37,12 @@ namespace EntidadesParcial
 
         public int CapacidadPasajeros
         {
-            get { return this.cantidadCamarotes*4; }
+            get { return this.cantidadCamarotes*Camarote.Capacidad; }
+        }
+        public int CapacidadPasajerosActual
+        {
+            get { return this.capacidadPasajerosActual; }
+            set { this.capacidadPasajerosActual = value; }
         }
 
         public bool EnViaje
@@ -54,7 +60,12 @@ namespace EntidadesParcial
         {
             get { return cantidadCamarotes; }
         }
+        #endregion
 
+        /// <summary>
+        /// constructor base del crucero
+        /// </summary>
+        /// <param name="cantidadCamarotes"></param>
         private Crucero(int cantidadCamarotes)
         {
             if(cantidadCamarotes>0)
@@ -77,8 +88,21 @@ namespace EntidadesParcial
                 this.cantidadSalones = 1;
                 this.cantidadCasinos = 0;
                 this.cantidadCamarotes = this.Camarotes.Count;
+                this.capacidadPasajerosActual = this.CapacidadPasajeros;
             }
         }
+        /// <summary>
+        /// constructor parametrizado de crucero
+        /// </summary>
+        /// <param name="matricula"></param>
+        /// <param name="nombre"></param>
+        /// <param name="salones"></param>
+        /// <param name="casinos"></param>
+        /// <param name="camarotes"></param>
+        /// <param name="pileta"></param>
+        /// <param name="gimnasio"></param>
+        /// <param name="bares"></param>
+        /// <param name="videoJuegos"></param>
         public Crucero(string matricula, string nombre, int salones, int casinos,int camarotes, ESiNo pileta, ESiNo gimnasio, ESiNo bares, ESiNo videoJuegos) :this(camarotes)
         {
             if(matricula is not null && nombre is not null&& salones>0 && casinos>-1)
@@ -93,7 +117,10 @@ namespace EntidadesParcial
                 this.videoJuegos = videoJuegos;
             }
         }
-
+        /// <summary>
+        /// crea la cadena con informacion del crucero
+        /// </summary>
+        /// <returns></returns> cadena con la info
         private string Mostrar()
         {
             StringBuilder cadena = new StringBuilder();
@@ -120,7 +147,10 @@ namespace EntidadesParcial
             cadena.AppendLine($"Ofrece videoJuegos: {this.videoJuegos} ");
             return cadena.ToString();
         }
-
+        /// <summary>
+        /// sobrecarga del toString para crucero
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return this.Mostrar();

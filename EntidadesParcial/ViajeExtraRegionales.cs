@@ -22,8 +22,8 @@ namespace EntidadesParcial
             }
         }
 
-       
 
+        #region propiedades
         public DateTime LLegada
         {
             get { return fechaInicio.AddHours(this.duracionHoras); }
@@ -33,7 +33,7 @@ namespace EntidadesParcial
         {
             get { return destinoExtraRegional; }
         }
-
+        #endregion
 
         public override string Mostrar()
         {
@@ -49,7 +49,12 @@ namespace EntidadesParcial
             return this.Mostrar();
         }
 
-
+        /// <summary>
+        /// sobrecarga del == compara en base a la fecha de inicio y el destino
+        /// </summary>
+        /// <param name="viaje1"></param>
+        /// <param name="viaje2"></param>
+        /// <returns></returns>
         public static bool operator ==(ViajeExtraRegionales viaje1, ViajeExtraRegionales viaje2)
         {
             bool rta = false;

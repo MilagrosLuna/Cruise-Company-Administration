@@ -51,6 +51,7 @@ namespace FrmParcial
             this.radioButton_NoBolso = new System.Windows.Forms.RadioButton();
             this.label_Bolso = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button_ayuda = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_viaje)).BeginInit();
@@ -187,6 +188,7 @@ namespace FrmParcial
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_ayuda);
             this.groupBox1.Controls.Add(this.label_genero);
             this.groupBox1.Controls.Add(this.button_agregarValija);
             this.groupBox1.Controls.Add(this.button_crearPasajero);
@@ -280,6 +282,16 @@ namespace FrmParcial
             this.label4.TabIndex = 6;
             this.label4.Text = "Nacionalidad";
             // 
+            // button_ayuda
+            // 
+            this.button_ayuda.Location = new System.Drawing.Point(686, 309);
+            this.button_ayuda.Name = "button_ayuda";
+            this.button_ayuda.Size = new System.Drawing.Size(75, 23);
+            this.button_ayuda.TabIndex = 37;
+            this.button_ayuda.Text = "Ayuda";
+            this.button_ayuda.UseVisualStyleBackColor = true;
+            this.button_ayuda.Click += new System.EventHandler(this.button_ayuda_Click);
+            // 
             // FrmVentaPasaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -288,6 +300,7 @@ namespace FrmParcial
             this.ClientSize = new System.Drawing.Size(910, 596);
             this.Controls.Add(this.panel1);
             this.Name = "FrmVentaPasaje";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVentaPasaje";
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -322,5 +335,6 @@ namespace FrmParcial
         private System.Windows.Forms.Label label_Bolso;
         private System.Windows.Forms.Label label_genero;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button_ayuda;
     }
 }

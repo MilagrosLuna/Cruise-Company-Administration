@@ -75,16 +75,20 @@ namespace FrmParcial
                 {
                     if (Compañia.viajesRegionales[dataGridView_viaje.CurrentCell.RowIndex].CantidadPasajeros < Compañia.viajesRegionales[dataGridView_viaje.CurrentCell.RowIndex].Embarcacion.CapacidadPasajeros)
                     {
-                        Compañia.viajesRegionales[dataGridView_viaje.CurrentCell.RowIndex].AgregarPasajero(pasajero);
-                        MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        if(Compañia.viajesRegionales[dataGridView_viaje.CurrentCell.RowIndex].AgregarPasajero(pasajero))
+                        {
+                            MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
                 }
                 else
                 {
                     if (Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].CantidadPasajeros < Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].Embarcacion.CapacidadPasajeros)
                     {
-                        Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].AgregarPasajero(pasajero);
-                        MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        if (Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].AgregarPasajero(pasajero))
+                        {
+                            MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
                 }
 

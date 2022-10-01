@@ -24,6 +24,7 @@ namespace EntidadesParcial
         protected int duracionHoras;
         protected List<Pasajero> pasajeros;
 
+        #region propiedades
         public List<Pasajero> ListaPasajeros
         {
             get { return this.pasajeros; }
@@ -67,7 +68,11 @@ namespace EntidadesParcial
             get { return duracionHoras; }
         }
 
+        #endregion
 
+        /// <summary>
+        /// constructor base de viaje, inicializa datos
+        /// </summary>
         protected Viaje()
         {
             this.puerto = PuertoPartida.BuenosAires_Argentina;
@@ -80,6 +85,13 @@ namespace EntidadesParcial
             this.duracionHoras = 0;
             this.pasajeros = new List<Pasajero>();
         }
+        /// <summary>
+        /// constructor parametrizado de viaje
+        /// </summary>
+        /// <param name="fecha"></param>
+        /// <param name="c1"></param>
+        /// <param name="camarotesPremium"></param>
+        /// <param name="camarotesTurista"></param>
         public Viaje(DateTime fecha, Crucero c1, int camarotesPremium, int camarotesTurista) : this()
         {
             if (camarotesPremium > 0 && c1 is not null && camarotesTurista>0)
@@ -90,7 +102,10 @@ namespace EntidadesParcial
                 this.cantidadCamarotesTurista = camarotesTurista;
             }
         }
-
+        /// <summary>
+        ///  metodo mostrar datos basicos del viaje
+        /// </summary>
+        /// <returns></returns>
         public virtual string Mostrar()
         {
             StringBuilder cadena = new StringBuilder();
@@ -106,12 +121,17 @@ namespace EntidadesParcial
             return cadena.ToString();
         }
 
+        /// <summary>
+        /// busca pasajero en la lista de pasajeros del viaje
+        /// </summary>
+        /// <param name="pasajero"></param>
+        /// <returns></returns>
         protected bool BuscarPasajero(Pasajero pasajero)
         {
             bool rta = false;
             foreach (Pasajero aux in this.pasajeros)
             {
-                if (pasajero == aux)
+                if (pasajero.Equals(aux))
                 {
                     rta = true;
                     break;
@@ -132,11 +152,15 @@ namespace EntidadesParcial
             bool ok = false;
             if (BuscarPasajero(pasajero) == false)
             {
-                this.pasajeros.Add(pasajero);
-                foreach (Bolsos item in pasajero.Equipajes)
+                if(this.embarcacion.CapacidadPasajerosActual > 0)
                 {
-                    this.embarcacion.CapacidadBodegaActual -= item.Peso;
-                }
+                    this.embarcacion.CapacidadPasajerosActual = this.embarcacion.CapacidadPasajerosActual - 1;
+                    this.pasajeros.Add(pasajero);
+                    foreach (Bolsos item in pasajero.Equipajes)
+                    {
+                        this.embarcacion.CapacidadBodegaActual -= item.Peso;
+                    }
+                }          
             }
             return ok;
         }

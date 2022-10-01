@@ -87,6 +87,7 @@ namespace FrmParcial
             this.ClientSize = new System.Drawing.Size(928, 558);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FrmVistaPasajeros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVistaPasajeros";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

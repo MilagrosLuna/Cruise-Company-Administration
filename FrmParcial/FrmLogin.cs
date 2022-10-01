@@ -47,7 +47,7 @@ namespace FrmParcial
                 User aux = new User(textBox_User.Text, textBox_Pass.Text);
                 foreach (User item in this.usuarios)
                 {
-                    if (item == aux)
+                    if (item.Equals(aux))
                     {
                         this.bandera = 1;
                         this.Visible = false;

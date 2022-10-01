@@ -37,6 +37,7 @@ namespace FrmParcial
             this.radioButton_extraRegional = new System.Windows.Forms.RadioButton();
             this.radioButton_regional = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.button_help = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox_clase.SuspendLayout();
             this.groupBox_viaje.SuspendLayout();
@@ -50,6 +51,7 @@ namespace FrmParcial
             this.tableLayoutPanel1.Controls.Add(this.groupBox_clase, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox_viaje, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button_help, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -140,6 +142,17 @@ namespace FrmParcial
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button_help
+            // 
+            this.button_help.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button_help.Location = new System.Drawing.Point(3, 149);
+            this.button_help.Name = "button_help";
+            this.button_help.Size = new System.Drawing.Size(75, 23);
+            this.button_help.TabIndex = 3;
+            this.button_help.Text = "ayuda";
+            this.button_help.UseVisualStyleBackColor = false;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
+            // 
             // FrmInicioVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -148,6 +161,7 @@ namespace FrmParcial
             this.ClientSize = new System.Drawing.Size(420, 211);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmInicioVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInicioVenta";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox_clase.ResumeLayout(false);
@@ -168,5 +182,6 @@ namespace FrmParcial
         private System.Windows.Forms.RadioButton radioButton_extraRegional;
         private System.Windows.Forms.RadioButton radioButton_regional;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_help;
     }
 }

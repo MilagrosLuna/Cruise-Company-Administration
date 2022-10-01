@@ -33,9 +33,12 @@ namespace FrmParcial
             this.dataGridView_viajes = new System.Windows.Forms.DataGridView();
             this.dataGridView_pasajeros = new System.Windows.Forms.DataGridView();
             this.button_verPasajeros = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_ayuda = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_viajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pasajeros)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -44,7 +47,7 @@ namespace FrmParcial
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.dataGridView_viajes, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView_pasajeros, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button_verPasajeros, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -91,15 +94,40 @@ namespace FrmParcial
             // button_verPasajeros
             // 
             this.button_verPasajeros.BackColor = System.Drawing.Color.MediumPurple;
-            this.button_verPasajeros.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_verPasajeros.Dock = System.Windows.Forms.DockStyle.Left;
             this.button_verPasajeros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_verPasajeros.Location = new System.Drawing.Point(3, 227);
+            this.button_verPasajeros.Location = new System.Drawing.Point(3, 19);
             this.button_verPasajeros.Name = "button_verPasajeros";
-            this.button_verPasajeros.Size = new System.Drawing.Size(842, 58);
+            this.button_verPasajeros.Size = new System.Drawing.Size(180, 36);
             this.button_verPasajeros.TabIndex = 4;
             this.button_verPasajeros.Text = "Ver Pasajeros";
             this.button_verPasajeros.UseVisualStyleBackColor = false;
             this.button_verPasajeros.Click += new System.EventHandler(this.button_verPasajeros_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button_ayuda);
+            this.groupBox1.Controls.Add(this.button_verPasajeros);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 227);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(842, 58);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // button_ayuda
+            // 
+            this.button_ayuda.BackColor = System.Drawing.Color.MediumPurple;
+            this.button_ayuda.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_ayuda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_ayuda.Location = new System.Drawing.Point(745, 19);
+            this.button_ayuda.Name = "button_ayuda";
+            this.button_ayuda.Size = new System.Drawing.Size(94, 36);
+            this.button_ayuda.TabIndex = 5;
+            this.button_ayuda.Text = "ayuda";
+            this.button_ayuda.UseVisualStyleBackColor = false;
+            this.button_ayuda.Click += new System.EventHandler(this.button_ayuda_Click);
             // 
             // FrmMdiPasajeros
             // 
@@ -114,6 +142,7 @@ namespace FrmParcial
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_viajes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pasajeros)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -124,5 +153,7 @@ namespace FrmParcial
         private System.Windows.Forms.DataGridView dataGridView_viajes;
         private System.Windows.Forms.DataGridView dataGridView_pasajeros;
         private System.Windows.Forms.Button button_verPasajeros;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button_ayuda;
     }
 }

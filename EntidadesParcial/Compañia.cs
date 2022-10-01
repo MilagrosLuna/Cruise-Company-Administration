@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EntidadesParcial
 {
     public static class Compañia
-    {
+    {   
         public static List<int> listaPesosValija = new List<int> { 1, 2, 3, 4, 5 ,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25};
         public static List<ViajeExtraRegionales> viajesExtraRegionales;
         public static List<ViajeRegionales> viajesRegionales;
@@ -15,9 +15,9 @@ namespace EntidadesParcial
         private static float precioPremiumRegional = precioTuristaRegional + (precioTuristaRegional * 20 / 100);
         private static float precioTuristaExtraRegional = 120;
         private static float precioPremiumExtraRegional = precioTuristaExtraRegional + (precioTuristaExtraRegional * 20 / 100);
-
         public static List<Crucero> embarcaciones;
 
+        #region propiedades 
         public static float PrecioTuristaRegional
         {
             get { return precioTuristaRegional; }
@@ -34,10 +34,11 @@ namespace EntidadesParcial
         {
             get { return precioPremiumExtraRegional; }
         }
-
+        #endregion
 
         static Compañia()
         {
+            /// inicializo listas de clase estatica
             Compañia.viajesExtraRegionales = new List<ViajeExtraRegionales>();
             Compañia.viajesRegionales = new List<ViajeRegionales>();
             Compañia.embarcaciones = new List<Crucero>();
@@ -75,10 +76,6 @@ namespace EntidadesParcial
             {
                 viajeRegional01.AgregarPasajero(item);
             }
-
-
-
-
 
 
 
@@ -170,7 +167,12 @@ namespace EntidadesParcial
             #endregion
 
         }
-       
+
+        /// <summary>
+        /// metodo para harcodear pasajeros en un viaje 
+        /// </summary>
+        /// <param name="cantidad"></param>  recibe la cantidad de pasajeros a harcodear
+        /// <returns></returns> devuelve una lista de pasajeros
         public static List<Pasajero> harcodearP(int cantidad)
         {
             List<Pasajero> pasajeros = new List<Pasajero>();
@@ -197,12 +199,18 @@ namespace EntidadesParcial
         }
 
 
+        #region agregar y buscar viaje , sobrecarga(regional,extraregiona)
+        /// <summary>
+        /// busca el viaje que recibe en mi lista
+        /// </summary>
+        /// <param name="v1"></param> recibe viaje 
+        /// <returns></returns> devulve si lo encontro en la lista o no
         public static bool BuscarViaje(ViajeRegionales v1)
         {
             bool rta = false;
             foreach (ViajeRegionales aux in Compañia.viajesRegionales)
             {
-                if (v1 == aux)
+                if (v1.Equals(aux))
                 {
                     rta = true;
                     break;
@@ -210,6 +218,11 @@ namespace EntidadesParcial
             }
             return rta;
         }
+        /// <summary>
+        ///  agregar un viaje a mi lista 
+        /// </summary>
+        /// <param name="v1"></param> recibe viaje
+        /// <returns></returns> devuelve si fue posible agrgarlo o no
         public static bool AgregarViaje(ViajeRegionales v1)
         {
             bool SeAgrego = false;
@@ -220,13 +233,17 @@ namespace EntidadesParcial
             }
             return SeAgrego;
         }
-
+        /// <summary>
+        /// busca el viaje que recibe en mi lista
+        /// </summary>
+        /// <param name="v1"></param> recibe viaje 
+        /// <returns></returns> devulve si lo encontro en la lista o no
         public static bool BuscarViaje(ViajeExtraRegionales v1)
         {
             bool rta = false;
             foreach (ViajeExtraRegionales aux in Compañia.viajesExtraRegionales)
             {
-                if (v1 == aux)
+                if (v1.Equals(aux))
                 {
                     rta = true;
                     break;
@@ -234,7 +251,11 @@ namespace EntidadesParcial
             }
             return rta;
         }
-
+        /// <summary>
+        ///  agregar un viaje a mi lista 
+        /// </summary>
+        /// <param name="v1"></param> recibe viaje
+        /// <returns></returns> devuelve si fue posible agrgarlo o no
         public static bool AgregarViaje(ViajeExtraRegionales v1)
         {
             bool SeAgrego = false;
@@ -246,6 +267,6 @@ namespace EntidadesParcial
             return SeAgrego;
         }
 
-
+        #endregion
     }
 }

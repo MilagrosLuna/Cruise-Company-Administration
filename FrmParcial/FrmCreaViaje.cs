@@ -78,5 +78,10 @@ namespace FrmParcial
                 MessageBox.Show("Seleccione un destino!!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button_ayuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("seleccione si quiere un destino regional o extra regional\n ingrese los datos y cree el viaje", "ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

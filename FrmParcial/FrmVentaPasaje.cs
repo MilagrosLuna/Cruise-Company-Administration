@@ -72,6 +72,9 @@ namespace FrmParcial
             return esValido;
         }
 
-        
+        private void button_ayuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ingrese los datos del pasajero \n agregue como minimo una valija\n cree el pasajero con el boton", "ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

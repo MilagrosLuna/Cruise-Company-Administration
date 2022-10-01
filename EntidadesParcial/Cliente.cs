@@ -10,6 +10,15 @@ namespace EntidadesParcial
     {
         private Pasaporte pasaporteP;
         private bool enViaje;
+
+        /// <summary>
+        ///  constructor parametrizado de cliente
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="pasaporte"></param>
+        /// <param name="edad"></param>
+        /// <param name="genero"></param>
         public Cliente(string nombre, string apellido, Pasaporte pasaporte, int edad, Sexo genero) : base(nombre, apellido, edad, genero)
         {
             if (pasaporte is not null)
@@ -18,9 +27,7 @@ namespace EntidadesParcial
                 this.enViaje = false;
             }
         }
-
-
-
+        #region propiedades
         public override string NombreCompeto
         {
             get { return this.nombre + " " + this.apellido; }
@@ -35,8 +42,12 @@ namespace EntidadesParcial
         {
             set { enViaje = value; }
         }
+        #endregion
 
-
+        /// <summary>
+        /// metodo para mostrar datos de los clientes
+        /// </summary>
+        /// <returns></returns> cadena con la informacion
         private string MostrarCliente()
         {
             StringBuilder cadena = new StringBuilder();
@@ -46,7 +57,10 @@ namespace EntidadesParcial
 
             return cadena.ToString();
         }
-
+        /// <summary>
+        /// sobrecarga del to string para cliente
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return this.MostrarCliente();
