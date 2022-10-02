@@ -21,9 +21,12 @@ namespace EntidadesParcial
         protected int cantidadCamarotesTurista;
         protected float precioPremium;
         protected float precioTurista;
+        protected float precioPremiumBruto;
+        protected float precioTuristaBruto;
         protected int duracionHoras;
         protected List<Pasajero> pasajeros;
 
+        
         #region propiedades
         public List<Pasajero> ListaPasajeros
         {
@@ -67,6 +70,25 @@ namespace EntidadesParcial
         {
             get { return duracionHoras; }
         }
+
+        public float PrecioPremiumBruto
+        {
+            get { return precioPremiumBruto; }
+        }
+        public float PrecioTuristaBruto
+        {
+            get { return precioTuristaBruto; }
+        }
+
+        public Pasajero this[int indice]
+        {
+            get
+            {
+                // agarrar el pasajero de la lista en ese indice
+                return this.pasajeros[indice];
+            }
+        }
+
 
         #endregion
 

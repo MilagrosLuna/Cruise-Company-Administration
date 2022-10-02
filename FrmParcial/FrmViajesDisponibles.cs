@@ -20,8 +20,12 @@ namespace FrmParcial
 
         private void FrmViajesDisponibles_Load(object sender, EventArgs e)
         {
+
             dataGridView_Regionales.DataSource = Compañia.viajesRegionales;
             dataGridView_extraRegionales.DataSource = Compañia.viajesExtraRegionales;
         }
+
+        
+
     }
 }

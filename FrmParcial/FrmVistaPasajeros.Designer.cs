@@ -34,6 +34,11 @@ namespace FrmParcial
             this.informacionCompletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viajeRegionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viajeExtraRegionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nombreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasaporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apellidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +46,8 @@ namespace FrmParcial
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verPasajerosToolStripMenuItem});
+            this.verPasajerosToolStripMenuItem,
+            this.buscarPorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(928, 45);
@@ -79,6 +85,45 @@ namespace FrmParcial
             this.viajeExtraRegionalToolStripMenuItem.Text = "Viaje ExtraRegional";
             this.viajeExtraRegionalToolStripMenuItem.Click += new System.EventHandler(this.viajeExtraRegionalToolStripMenuItem_Click);
             // 
+            // buscarPorToolStripMenuItem
+            // 
+            this.buscarPorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nombreToolStripMenuItem,
+            this.pasaporteToolStripMenuItem,
+            this.edadToolStripMenuItem,
+            this.apellidoToolStripMenuItem});
+            this.buscarPorToolStripMenuItem.Name = "buscarPorToolStripMenuItem";
+            this.buscarPorToolStripMenuItem.Size = new System.Drawing.Size(154, 41);
+            this.buscarPorToolStripMenuItem.Text = "buscar por";
+            // 
+            // nombreToolStripMenuItem
+            // 
+            this.nombreToolStripMenuItem.Name = "nombreToolStripMenuItem";
+            this.nombreToolStripMenuItem.Size = new System.Drawing.Size(211, 42);
+            this.nombreToolStripMenuItem.Text = "Nombre";
+            this.nombreToolStripMenuItem.Click += new System.EventHandler(this.nombreToolStripMenuItem_Click);
+            // 
+            // pasaporteToolStripMenuItem
+            // 
+            this.pasaporteToolStripMenuItem.Name = "pasaporteToolStripMenuItem";
+            this.pasaporteToolStripMenuItem.Size = new System.Drawing.Size(211, 42);
+            this.pasaporteToolStripMenuItem.Text = "Pasaporte";
+            this.pasaporteToolStripMenuItem.Click += new System.EventHandler(this.pasaporteToolStripMenuItem_Click);
+            // 
+            // edadToolStripMenuItem
+            // 
+            this.edadToolStripMenuItem.Name = "edadToolStripMenuItem";
+            this.edadToolStripMenuItem.Size = new System.Drawing.Size(211, 42);
+            this.edadToolStripMenuItem.Text = "Edad";
+            this.edadToolStripMenuItem.Click += new System.EventHandler(this.edadToolStripMenuItem_Click);
+            // 
+            // apellidoToolStripMenuItem
+            // 
+            this.apellidoToolStripMenuItem.Name = "apellidoToolStripMenuItem";
+            this.apellidoToolStripMenuItem.Size = new System.Drawing.Size(211, 42);
+            this.apellidoToolStripMenuItem.Text = "Apellido";
+            this.apellidoToolStripMenuItem.Click += new System.EventHandler(this.apellidoToolStripMenuItem_Click);
+            // 
             // FrmVistaPasajeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -103,5 +148,10 @@ namespace FrmParcial
         private System.Windows.Forms.ToolStripMenuItem informacionCompletaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viajeRegionalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viajeExtraRegionalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarPorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nombreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pasaporteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem apellidoToolStripMenuItem;
     }
 }

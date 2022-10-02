@@ -8,10 +8,11 @@ namespace EntidadesParcial
 {
     public static class Estadisticas
     {
-        public static List<Pasajero> listaPasajeros;
-        public static List<ViajeExtraRegionales> viajesExtraRegionales;
-        public static List<ViajeRegionales> viajesRegionales;
-        public static float recaudacionTotal;
+        public static List<ViajeExtraRegionales> viajesExtraRegionalesEstadistica;
+        public static List<ViajeRegionales> viajesRegionalesEstadistica;
+
+        public static List<Destinos> destinos;
+
 
         private static float precioTuristaRegional = 57;
         private static float precioPremiumRegional = precioTuristaRegional + (precioTuristaRegional * 20 / 100);
@@ -23,13 +24,28 @@ namespace EntidadesParcial
 
         static Estadisticas()
         {
-            // le asigno los viajes actules a estadisticas 
-            viajesRegionales = Compañia.viajesRegionales;
-            viajesExtraRegionales = Compañia.viajesExtraRegionales;
+            Estadisticas.viajesRegionalesEstadistica = new List<ViajeRegionales>();
+            Estadisticas.viajesExtraRegionalesEstadistica = new List<ViajeExtraRegionales>();
 
-            listaPasajeros = new List<Pasajero>();
+            Estadisticas.destinos = new List<Destinos>();
 
-            // ademas creo viajes antiguos para harcodear informacion de las estadisticas
+            #region cargar destinos
+            foreach (var item in Enum.GetValues(typeof(Regionales)))
+            {
+                string cadena = item.ToString();
+                Destinos destino = new Destinos(cadena, 0, 0, 0);
+                Estadisticas.destinos.Add(destino);
+            }
+            foreach (var item in Enum.GetValues(typeof(ExtraRegionales)))
+            {
+                string cadena = item.ToString();
+                Destinos destino = new Destinos(cadena, 0, 0, 0);
+                Estadisticas.destinos.Add(destino);
+            }
+
+           
+
+            #endregion
 
             #region crear y agregar cruceros
             Crucero embarcacion1 = new Crucero("vv456hh", "marquito", 15, 3, 50, ESiNo.Si, ESiNo.Si, ESiNo.Si, ESiNo.Si);
@@ -43,8 +59,7 @@ namespace EntidadesParcial
             #endregion
 
             #region crear y agregar Viajes
-
-
+            
             DateTime fecha01 = new DateTime(2020, 6, 30, 20, 36, 0);
             int camarotesPremiun = embarcacion1.CamarotesCantidad * 35 / 100;
             int camarotesTurista = embarcacion1.CamarotesCantidad - camarotesPremiun;
@@ -52,7 +67,7 @@ namespace EntidadesParcial
             embarcacion1.EnViaje = false;
 
 
-            foreach (var item in Estadisticas.harcodear(136))
+            foreach (var item in Estadisticas.harcodear(136, "diego", "busi"))
             {
                 viajeRegional01.AgregarPasajero(item);
             }
@@ -62,7 +77,7 @@ namespace EntidadesParcial
             camarotesTurista = embarcacion8.CamarotesCantidad - camarotesPremiun;
             ViajeRegionales viajeRegional1 = new ViajeRegionales(Regionales.Cartagena_Colombia, fecha1, embarcacion8, camarotesPremiun, camarotesTurista, precioPremiumRegional, precioTuristaRegional);
             embarcacion8.EnViaje = false;
-            foreach (var item in Estadisticas.harcodear(400))
+            foreach (var item in Estadisticas.harcodear(400, "mario", "luna"))
             {
                 viajeRegional1.AgregarPasajero(item);
             }
@@ -73,7 +88,7 @@ namespace EntidadesParcial
             camarotesTurista = embarcacion2.CamarotesCantidad - camarotesPremiun;
             ViajeRegionales viajeRegional2 = new ViajeRegionales(Regionales.Recife_Brasil, fecha2, embarcacion2, camarotesPremiun, camarotesTurista, precioPremiumRegional, precioTuristaRegional);
             embarcacion2.EnViaje = false;
-            foreach (var item in Estadisticas.harcodear(36))
+            foreach (var item in Estadisticas.harcodear(36, "felipe", "iglesias"))
             {
                 viajeRegional2.AgregarPasajero(item);
             }
@@ -84,16 +99,16 @@ namespace EntidadesParcial
             camarotesTurista = embarcacion3.CamarotesCantidad - camarotesPremiun;
             ViajeRegionales viajeRegional3 = new ViajeRegionales(Regionales.Santiago_Chile, fecha3, embarcacion3, camarotesPremiun, camarotesTurista, precioPremiumRegional, precioTuristaRegional);
             embarcacion3.EnViaje = false;
-            foreach (var item in Estadisticas.harcodear(199))
+            foreach (var item in Estadisticas.harcodear(199, "nancy", "iris"))
             {
                 viajeRegional3.AgregarPasajero(item);
             }
 
 
-            Estadisticas.viajesRegionales.Add(viajeRegional01);
-            Estadisticas.viajesRegionales.Add(viajeRegional1);
-            Estadisticas.viajesRegionales.Add(viajeRegional2);
-            Estadisticas.viajesRegionales.Add(viajeRegional3);
+            Estadisticas.viajesRegionalesEstadistica.Add(viajeRegional01);
+            Estadisticas.viajesRegionalesEstadistica.Add(viajeRegional1);
+            Estadisticas.viajesRegionalesEstadistica.Add(viajeRegional2);
+            Estadisticas.viajesRegionalesEstadistica.Add(viajeRegional3);
 
 
 
@@ -102,7 +117,7 @@ namespace EntidadesParcial
             camarotesTurista = embarcacion4.CamarotesCantidad - camarotesPremiun;
             ViajeExtraRegionales viajeExtraRegional1 = new ViajeExtraRegionales(ExtraRegionales.Acapulco_México, fecha4, embarcacion4, camarotesPremiun, camarotesTurista, precioPremiumExtraRegional, precioTuristaExtraRegional);
             embarcacion4.EnViaje = false;
-            foreach (var item in Estadisticas.harcodear(200))
+            foreach (var item in Estadisticas.harcodear(200, "juanse", "calles"))
             {
                 viajeExtraRegional1.AgregarPasajero(item);
             }
@@ -113,7 +128,7 @@ namespace EntidadesParcial
             camarotesTurista = embarcacion5.CamarotesCantidad - camarotesPremiun;
             ViajeExtraRegionales viajeExtraRegional2 = new ViajeExtraRegionales(ExtraRegionales.Atenas_Grecia, fecha5, embarcacion5, camarotesPremiun, camarotesTurista, precioPremiumExtraRegional, precioTuristaExtraRegional);
             embarcacion5.EnViaje = false;
-            foreach (var item in Estadisticas.harcodear(600))
+            foreach (var item in Estadisticas.harcodear(600, "joaquin", "roca"))
             {
                 viajeExtraRegional2.AgregarPasajero(item);
             }
@@ -123,7 +138,7 @@ namespace EntidadesParcial
             camarotesTurista = embarcacion7.CamarotesCantidad - camarotesPremiun;
             ViajeExtraRegionales viajeExtraRegional3 = new ViajeExtraRegionales(ExtraRegionales.Venecia_Italia, fecha6, embarcacion7, camarotesPremiun, camarotesTurista, precioPremiumExtraRegional, precioTuristaExtraRegional);
             embarcacion7.EnViaje = false;
-            foreach (var item in Estadisticas.harcodear(183))
+            foreach (var item in Estadisticas.harcodear(183, "adrian", "sales"))
             {
                 viajeExtraRegional3.AgregarPasajero(item);
             }
@@ -134,80 +149,100 @@ namespace EntidadesParcial
             ViajeExtraRegionales viajeExtraRegional4 = new ViajeExtraRegionales(ExtraRegionales.Bangkok_Tailandia, fecha7, embarcacion8, camarotesPremiun, camarotesTurista, precioPremiumExtraRegional, precioTuristaExtraRegional);
             embarcacion8.EnViaje = false;
 
-            foreach (var item in Estadisticas.harcodear(200))
+            foreach (var item in Estadisticas.harcodear(200, "manuel", "sanchez"))
             {
                 viajeExtraRegional4.AgregarPasajero(item);
             }
 
-            Estadisticas.viajesExtraRegionales.Add(viajeExtraRegional1);
-            Estadisticas.viajesExtraRegionales.Add(viajeExtraRegional2);
-            Estadisticas.viajesExtraRegionales.Add(viajeExtraRegional3);
-            Estadisticas.viajesExtraRegionales.Add(viajeExtraRegional4);
+            Estadisticas.viajesExtraRegionalesEstadistica.Add(viajeExtraRegional1);
+            Estadisticas.viajesExtraRegionalesEstadistica.Add(viajeExtraRegional2);
+            Estadisticas.viajesExtraRegionalesEstadistica.Add(viajeExtraRegional3);
+            Estadisticas.viajesExtraRegionalesEstadistica.Add(viajeExtraRegional4);
 
 
-            foreach (ViajeRegionales item in Compañia.viajesRegionales)
-            {
-                Estadisticas.viajesRegionales.Add(item);
-            }
-
-            foreach (ViajeExtraRegionales item in Compañia.viajesExtraRegionales)
-            {
-                Estadisticas.viajesExtraRegionales.Add(item);
-            }
 
             #endregion
 
-            #region agregar pasajeros
-            foreach (ViajeRegionales item in Estadisticas.viajesRegionales)
+
+            foreach (var item in Estadisticas.viajesRegionalesEstadistica)
             {
-                foreach (Pasajero pasajero in item.ListaPasajeros)
+                for (int i = 0; i < Estadisticas.destinos.Count; i++)
                 {
-                    listaPasajeros.Add(pasajero);
+                    if (item.DestinoRegional.ToString() == Estadisticas.destinos[i].Destino)
+                    {
+                        Estadisticas.destinos[i].CantidadViajes++;
+                        Estadisticas.destinos[i].CantidadPasajeros += item.CantidadPasajeros;
+                        foreach (Pasajero pasajero in item.ListaPasajeros)
+                        {
+                            if (pasajero.Clase == TipoPasajero.Premium)
+                            {
+                                Estadisticas.destinos[i].Recaudacion += item.PrecioPremium;
+                            }
+                            else
+                            {
+                                Estadisticas.destinos[i].Recaudacion += item.PrecioTurista;
+                            }
+                        }
+                    }
                 }
             }
 
-            foreach (ViajeExtraRegionales item in Estadisticas.viajesExtraRegionales)
+            foreach (var item in Estadisticas.viajesExtraRegionalesEstadistica)
             {
-                foreach (Pasajero pasajero in item.ListaPasajeros)
+                for (int i = 0; i < Estadisticas.destinos.Count; i++)
                 {
-                    listaPasajeros.Add(pasajero);
+                    if (item.DestinoExtraRegional.ToString() == Estadisticas.destinos[i].Destino)
+                    {
+                        Estadisticas.destinos[i].CantidadViajes++;
+                        Estadisticas.destinos[i].CantidadPasajeros += item.CantidadPasajeros;
+                        foreach (Pasajero pasajero in item.ListaPasajeros)
+                        {
+                            if (pasajero.Clase == TipoPasajero.Premium)
+                            {
+                                Estadisticas.destinos[i].Recaudacion += item.PrecioPremium;
+                            }
+                            else
+                            {
+                                Estadisticas.destinos[i].Recaudacion += item.PrecioTurista;
+                            }
+                        }
+                    }
                 }
             }
-            #endregion
 
+            
 
-            }
+        }
+
+       
 
         /// <summary>
         /// metodo para harcodear pasajeros en un viaje 
         /// </summary>
         /// <param name="cantidad"></param>  recibe la cantidad de pasajeros a harcodear
         /// <returns></returns> devuelve una lista de pasajeros
-        public static List<Pasajero> harcodear(int cantidad)
+        public static List<Pasajero> harcodear(int cantidad, string nombre, string apellido)
         {
             List<Pasajero> pasajeros = new List<Pasajero>();
             Pasajero pasajero;
             for (int i = 0; i < cantidad; i++)
             {
-                string name = "juanpa" + i;
-                string apellido = "merida";
                 int numPasaporte = 23 + i;
-                Nacionalidad nacionalidad = Nacionalidad.Afganistán;
+                Nacionalidad nacionalidad = Nacionalidad.AntiguaYBarbuda;
                 Pasaporte pasaporte = new Pasaporte(DateTime.Today, numPasaporte, nacionalidad);
                 int edad = 21;
                 Sexo genero = Sexo.Hombre;
-                Cliente cliente = new Cliente(name, apellido, pasaporte, edad, genero);
+                Cliente cliente = new Cliente(nombre, apellido, pasaporte, edad, genero);
                 TipoPasajero tipoPasajero = TipoPasajero.Premium;
 
                 pasajero = new Pasajero(cliente, tipoPasajero);
-                Bolsos valija = new Bolsos(3, Equipaje.De_Bodega);
+                Bolsos valija = new Bolsos(6, Equipaje.De_Bodega);
                 pasajero = pasajero + valija;
 
                 pasajeros.Add(pasajero);
             }
             return pasajeros;
         }
-
 
 
     }

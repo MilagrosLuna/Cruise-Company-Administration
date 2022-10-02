@@ -16,6 +16,7 @@ namespace FrmParcial
         private List<User> usuarios;
         private int bandera=0;
 
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -24,24 +25,13 @@ namespace FrmParcial
         private void FrmLogin_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.usuarios = new List<User>();
-            User u1 = new User("mili890m", "seguritix","milagros","luna",18,Sexo.Mujer);
-            User u2 = new User("juanpedro90", "miabuelita1", "juan", "perez", 35, Sexo.NoBinario);
-            User u3 = new User("martin89", "mundi2022", "martin", "sanchez", 28, Sexo.Hombre);
-            User u4 = new User("vanesalopez", "coquitafria", "vanesa", "lopez", 42, Sexo.Mujer);
-
-            User u5 = new User("a", "a", "milagros", "luna", 18, Sexo.Mujer);
-
-            usuarios.Add(u1);
-            usuarios.Add(u2);
-            usuarios.Add(u3);
-            usuarios.Add(u4);
-
-            usuarios.Add(u5);
+            this.usuarios = Compañia.usuarios;
+           
         }
 
         private void btn_LogIn_Click(object sender, EventArgs e)
         {
+            int correcto = 0;
             if (Validar())
             {
                 User aux = new User(textBox_User.Text, textBox_Pass.Text);
@@ -49,12 +39,18 @@ namespace FrmParcial
                 {
                     if (item.Equals(aux))
                     {
+                        correcto = 1;
                         this.bandera = 1;
                         this.Visible = false;
                         FormPrincipal frm = new FormPrincipal(item);  // consultar por 
                         frm.ShowDialog();
                         this.Close();
                     }
+      
+                }
+                if(correcto==0)
+                {
+                    MessageBox.Show("datos no validos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

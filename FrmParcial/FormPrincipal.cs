@@ -20,6 +20,7 @@ namespace FrmParcial
 
         private FrmEstadisticas frmEstadisticas;
 
+        private FrmAgregaCrucero agregaCrucero;
 
         public FormPrincipal(User user)
         {
@@ -28,7 +29,26 @@ namespace FrmParcial
             this.frmViajesDisponibles = new FrmViajesDisponibles();
             this.frmCreaViaje = new FrmCreaViaje();
             this.frmEstadisticas = new FrmEstadisticas();
+            this.agregaCrucero = new FrmAgregaCrucero();
             this.textBox1.Text = user.NombreCompeto;
+            User aux = null;
+
+            foreach (User item in Compañia.usuarios)
+            {
+                if (item.Nombre == "Sara" )
+                {
+                    aux = item;
+                    break;
+                }
+            }
+            this.button_crearCrucero.Enabled = false;
+            this.textBox_admin.Text = "No es admin";
+            if (user==aux)
+            {
+                this.button_crearCrucero.Enabled = true;
+                this.textBox_admin.Text = "Es admin";
+            }
+            
 
         }
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -36,7 +56,7 @@ namespace FrmParcial
             this.textBox1.Enabled = false;
             this.textBox2.Enabled = false;
             this.textBox2.Text = DateTime.Today.ToShortDateString();
-            
+            this.agregaCrucero.Text = "Agrega Crucero";
             this.frmVenta.Text = "Venta Pasaje";
             this.frmCreaViaje.Text = "Crear Viaje";
             this.frmViajesDisponibles.Text = "Viajes Disponibles";
@@ -76,6 +96,11 @@ namespace FrmParcial
         private void button_estadisticas_Click(object sender, EventArgs e)
         {
             frmEstadisticas.ShowDialog();
+        }
+
+        private void button_crearCrucero_Click(object sender, EventArgs e)
+        {
+            agregaCrucero.ShowDialog();
         }
     }
 }

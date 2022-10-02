@@ -28,7 +28,23 @@ namespace EntidadesParcial
                return cliente.ToString();
             }
         }
+        public string Apellido
+        {
+            get { return cliente.Apellido; }
+        }
 
+        public int NumeroDelPasaporte
+        {
+            get { return cliente.NumeroDelPasaporte; }
+        }
+        public int Edad
+        {
+            get { return cliente.Edad; }
+        }
+        public string Nombre
+        {
+            get { return cliente.Nombre; }
+        }
         public string Equipaje
         {
             get 

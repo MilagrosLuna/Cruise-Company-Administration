@@ -33,9 +33,22 @@ namespace EntidadesParcial
             get { return this.nombre + " " + this.apellido; }
         }
 
+        public string Nombre
+        {
+            get { return this.nombre; }
+        }
+        public string Apellido
+        {
+            get { return this.apellido; }
+        }
+
         public int NumeroDelPasaporte
         {
             get { return this.pasaporteP.NumeroPasaporte ; }
+        }
+        public int Edad
+        {
+            get { return this.edad; }
         }
 
         public bool EnViaje

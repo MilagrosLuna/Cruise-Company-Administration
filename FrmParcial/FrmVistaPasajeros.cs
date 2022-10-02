@@ -14,6 +14,7 @@ namespace FrmParcial
     {
         private FrmMdiPasajeros pasajerosRegionales;
         private FrmMdiPasajeros pasajerosExtraRegionales;
+        private FrmPasajeroFiltrado pasajeroFiltrado;
         public FrmVistaPasajeros()
         {
             InitializeComponent();
@@ -22,6 +23,8 @@ namespace FrmParcial
             pasajerosRegionales.MdiParent = this;
             pasajerosExtraRegionales = new FrmMdiPasajeros(false);
             pasajerosExtraRegionales.MdiParent = this;
+            pasajeroFiltrado = new FrmPasajeroFiltrado();
+            pasajeroFiltrado.MdiParent = this;
         }
 
         private void viajeRegionalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,5 +38,30 @@ namespace FrmParcial
             pasajerosExtraRegionales.Show();
             pasajerosRegionales.Hide();
         }
+
+        private void nombreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pasajeroFiltrado.CambiarBandera(0);
+            pasajeroFiltrado.Show();
+        }
+
+        private void pasaporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pasajeroFiltrado.CambiarBandera(1);
+            pasajeroFiltrado.Show();
+        }
+
+        private void edadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pasajeroFiltrado.CambiarBandera(2);
+            pasajeroFiltrado.Show();
+        }
+
+        private void apellidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pasajeroFiltrado.CambiarBandera(3);
+            pasajeroFiltrado.Show();
+        }
+
     }
 }

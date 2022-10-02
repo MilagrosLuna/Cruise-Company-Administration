@@ -13,8 +13,10 @@ namespace FrmParcial
     public partial class FrmMdiPasajeros : Form
     {
         private bool regionalMdi = false;
+        private List<Pasajero> pasajeros;
         public FrmMdiPasajeros(bool regional)
         {
+            pasajeros = new List<Pasajero>();
             InitializeComponent();
             if (regional)
             {
@@ -29,15 +31,29 @@ namespace FrmParcial
 
         private void button_verPasajeros_Click(object sender, EventArgs e)
         {
+            pasajeros.Clear();
             if (regionalMdi)
             {
+
+                for(int i=0;i < Compañia.viajesRegionales[dataGridView_viajes.CurrentCell.RowIndex].CantidadPasajeros;i++)
+                {
+                    pasajeros.Add(Compañia.viajesRegionales[dataGridView_viajes.CurrentCell.RowIndex][i]);
+                }
                 dataGridView_pasajeros.DataSource = null;
-                dataGridView_pasajeros.DataSource = Compañia.viajesRegionales[dataGridView_viajes.CurrentCell.RowIndex].ListaPasajeros;
+                dataGridView_pasajeros.DataSource = pasajeros;
+                //dataGridView_pasajeros.DataSource = null;
+                //dataGridView_pasajeros.DataSource = Compañia.viajesRegionales[dataGridView_viajes.CurrentCell.RowIndex].ListaPasajeros;
             }
             else
             {
+                for (int i = 0; i < Compañia.viajesExtraRegionales[dataGridView_viajes.CurrentCell.RowIndex].CantidadPasajeros; i++)
+                {
+                    pasajeros.Add(Compañia.viajesExtraRegionales[dataGridView_viajes.CurrentCell.RowIndex][i]);
+                }
                 dataGridView_pasajeros.DataSource = null;
-                dataGridView_pasajeros.DataSource = Compañia.viajesExtraRegionales[dataGridView_viajes.CurrentCell.RowIndex].ListaPasajeros;
+                dataGridView_pasajeros.DataSource = pasajeros;
+                //dataGridView_pasajeros.DataSource = null;
+                //dataGridView_pasajeros.DataSource = Compañia.viajesExtraRegionales[dataGridView_viajes.CurrentCell.RowIndex].ListaPasajeros;
             }
             
         }

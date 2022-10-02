@@ -29,6 +29,46 @@ namespace EntidadesParcial
         }
 
         #region propiedades
+
+        public string Matricula
+        {
+            get { return this.matricula; }
+        }
+        public string Nombre
+        {
+            get { return this.nombre; }
+        }
+
+        public int CantidadSalones
+        {
+            get { return this.cantidadSalones; }
+        }
+        public int CantidadCasinos
+        {
+            get { return this.cantidadCasinos; }
+        }
+
+
+        public ESiNo Pileta
+        {
+            get { return this.pileta; }
+        }
+
+        public ESiNo Bares
+        {
+            get { return this.bares; }
+        }
+
+        public ESiNo Gimnasio
+        {
+            get { return this.gimnasio; }
+        }
+
+        public ESiNo Videojuegos
+        {
+            get { return this.videoJuegos; }
+        }
+
         public int CapacidadBodegaActual
         {
             get { return this.capacidadBodegaActual; }
@@ -155,6 +195,41 @@ namespace EntidadesParcial
         {
             return this.Mostrar();
         }
+
+
+
+        public static bool operator ==(Crucero barco1, Crucero barco2)
+        {
+            bool rta = false;
+            if (barco1.matricula==barco2.matricula&&barco1.nombre==barco2.nombre)
+            {
+                rta = true;
+            }
+            return rta;
+        }
+        public static bool operator !=(Crucero barco1, Crucero barco2)
+        {
+            return !(barco1 == barco2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool ok = false;
+            if (obj is Crucero)
+            {
+                if (this == ((Crucero)obj))
+                {
+                    ok = true;
+                }
+            }
+            return ok;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.cantidadCamarotes.GetHashCode();
+        }
+
 
 
     }

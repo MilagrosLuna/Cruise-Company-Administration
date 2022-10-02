@@ -17,8 +17,11 @@ namespace EntidadesParcial
                 this.destinoExtraRegional = destino;
                 Random myObject = new Random();
                 this.duracionHoras = myObject.Next(480, 720);
-                this.precioPremium = precioPremium * this.duracionHoras;
-                this.precioTurista = precioTurista * this.duracionHoras;
+                this.precioPremiumBruto = precioPremium * this.duracionHoras;
+                this.precioTuristaBruto = precioTurista * this.duracionHoras;
+
+                this.precioPremium = precioPremiumBruto + (precioPremiumBruto * 21 / 100);
+                this.precioTurista = precioTuristaBruto + (precioTuristaBruto * 21 / 100);
             }
         }
 
