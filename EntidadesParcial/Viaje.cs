@@ -163,29 +163,5 @@ namespace EntidadesParcial
         }
 
 
-        /// <summary>
-        ///  VA A VERIFICAR QUE EL PASAJERO NO ESTE EN LA LISTA Y LO VA A AGREGAR
-        /// </summary>
-        /// <param name="pasajero"></param> recibe pasajero para agregar
-        /// <param name="lista"></param> recibe un int para ver en que lista lo agrega si en regional(1) o extraregiona(2)
-        /// <returns></returns>
-        public bool AgregarPasajero(Pasajero pasajero)
-        {
-            bool ok = false;
-            if (BuscarPasajero(pasajero) == false)
-            {
-                if(this.embarcacion.CapacidadPasajerosActual > 0)
-                {
-                    this.embarcacion.CapacidadPasajerosActual = this.embarcacion.CapacidadPasajerosActual - 1;
-                this.pasajeros.Add(pasajero);
-                foreach (Bolsos item in pasajero.Equipajes)
-                {
-                    this.embarcacion.CapacidadBodegaActual -= item.Peso;
-                }
-            }
-            }
-            return ok;
-        }
-
     }
 }
