@@ -204,6 +204,7 @@ namespace FrmParcial
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.HelpButton = true;
+            this.MinimumSize = new System.Drawing.Size(461, 508);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso";

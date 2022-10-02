@@ -40,7 +40,7 @@ namespace FrmParcial
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1090, 616);
+            this.dataGridView1.Size = new System.Drawing.Size(574, 641);
             this.dataGridView1.TabIndex = 0;
             // 
             // FrmEstadisticas
@@ -48,11 +48,12 @@ namespace FrmParcial
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1090, 616);
+            this.ClientSize = new System.Drawing.Size(574, 641);
             this.Controls.Add(this.dataGridView1);
+            this.MinimumSize = new System.Drawing.Size(590, 680);
             this.Name = "FrmEstadisticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEstadisticas";
+            this.Text = "Estadisticas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

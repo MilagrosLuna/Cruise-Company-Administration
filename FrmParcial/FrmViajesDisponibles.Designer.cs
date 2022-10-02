@@ -122,9 +122,10 @@ namespace FrmParcial
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1293, 656);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(1309, 695);
             this.Name = "FrmViajesDisponibles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmViajesDisponibles";
+            this.Text = "Viajes Disponibles";
             this.Load += new System.EventHandler(this.FrmViajesDisponibles_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

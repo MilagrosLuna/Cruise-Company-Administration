@@ -136,9 +136,9 @@ namespace FrmParcial
             this.button1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.button1.Location = new System.Drawing.Point(213, 149);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 33);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
+            this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -147,7 +147,7 @@ namespace FrmParcial
             this.button_help.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.button_help.Location = new System.Drawing.Point(3, 149);
             this.button_help.Name = "button_help";
-            this.button_help.Size = new System.Drawing.Size(75, 23);
+            this.button_help.Size = new System.Drawing.Size(75, 33);
             this.button_help.TabIndex = 3;
             this.button_help.Text = "ayuda";
             this.button_help.UseVisualStyleBackColor = false;
@@ -160,9 +160,9 @@ namespace FrmParcial
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(420, 211);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(436, 250);
             this.Name = "FrmInicioVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmInicioVenta";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox_clase.ResumeLayout(false);
             this.groupBox_clase.PerformLayout();

@@ -131,9 +131,10 @@ namespace FrmParcial
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(928, 558);
             this.Controls.Add(this.menuStrip1);
+            this.MinimumSize = new System.Drawing.Size(944, 597);
             this.Name = "FrmVistaPasajeros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmVistaPasajeros";
+            this.Text = "Ver pasajeros";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

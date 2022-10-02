@@ -66,23 +66,23 @@ namespace FrmParcial
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.84419F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.15581F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 707F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 709F));
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 604);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 608);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1002, 45);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1056, 45);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(909, 8);
+            this.textBox2.Location = new System.Drawing.Point(963, 8);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(90, 29);
             this.textBox2.TabIndex = 2;
@@ -93,9 +93,9 @@ namespace FrmParcial
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(9, 0);
+            this.label1.Location = new System.Drawing.Point(7, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 45);
+            this.label1.Size = new System.Drawing.Size(106, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "USER";
             // 
@@ -103,7 +103,7 @@ namespace FrmParcial
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(105, 8);
+            this.textBox1.Location = new System.Drawing.Point(123, 8);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(186, 29);
             this.textBox1.TabIndex = 1;
@@ -128,7 +128,7 @@ namespace FrmParcial
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1002, 604);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1056, 608);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // groupBox_viajeDisponible
@@ -138,7 +138,7 @@ namespace FrmParcial
             this.groupBox_viajeDisponible.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox_viajeDisponible.Location = new System.Drawing.Point(3, 3);
             this.groupBox_viajeDisponible.Name = "groupBox_viajeDisponible";
-            this.groupBox_viajeDisponible.Size = new System.Drawing.Size(327, 195);
+            this.groupBox_viajeDisponible.Size = new System.Drawing.Size(345, 196);
             this.groupBox_viajeDisponible.TabIndex = 0;
             this.groupBox_viajeDisponible.TabStop = false;
             this.groupBox_viajeDisponible.Text = "Viajes Disponibles";
@@ -158,9 +158,9 @@ namespace FrmParcial
             this.groupBox_ventaPasaje.Controls.Add(this.button_ventaPasaje);
             this.groupBox_ventaPasaje.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox_ventaPasaje.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_ventaPasaje.Location = new System.Drawing.Point(670, 405);
+            this.groupBox_ventaPasaje.Location = new System.Drawing.Point(706, 407);
             this.groupBox_ventaPasaje.Name = "groupBox_ventaPasaje";
-            this.groupBox_ventaPasaje.Size = new System.Drawing.Size(329, 196);
+            this.groupBox_ventaPasaje.Size = new System.Drawing.Size(347, 198);
             this.groupBox_ventaPasaje.TabIndex = 1;
             this.groupBox_ventaPasaje.TabStop = false;
             this.groupBox_ventaPasaje.Text = "Venta Pasaje";
@@ -180,9 +180,9 @@ namespace FrmParcial
             this.groupBox_estadisticas.Controls.Add(this.button_estadisticas);
             this.groupBox_estadisticas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox_estadisticas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_estadisticas.Location = new System.Drawing.Point(3, 405);
+            this.groupBox_estadisticas.Location = new System.Drawing.Point(3, 407);
             this.groupBox_estadisticas.Name = "groupBox_estadisticas";
-            this.groupBox_estadisticas.Size = new System.Drawing.Size(327, 196);
+            this.groupBox_estadisticas.Size = new System.Drawing.Size(345, 198);
             this.groupBox_estadisticas.TabIndex = 2;
             this.groupBox_estadisticas.TabStop = false;
             this.groupBox_estadisticas.Text = "Estadisticas Historicas";
@@ -202,9 +202,9 @@ namespace FrmParcial
             this.groupBox_CrearViajes.Controls.Add(this.button_crearViaje);
             this.groupBox_CrearViajes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox_CrearViajes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_CrearViajes.Location = new System.Drawing.Point(336, 3);
+            this.groupBox_CrearViajes.Location = new System.Drawing.Point(354, 3);
             this.groupBox_CrearViajes.Name = "groupBox_CrearViajes";
-            this.groupBox_CrearViajes.Size = new System.Drawing.Size(328, 195);
+            this.groupBox_CrearViajes.Size = new System.Drawing.Size(346, 196);
             this.groupBox_CrearViajes.TabIndex = 3;
             this.groupBox_CrearViajes.TabStop = false;
             this.groupBox_CrearViajes.Text = "Crea Viajes";
@@ -223,9 +223,9 @@ namespace FrmParcial
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(336, 204);
+            this.pictureBox1.Location = new System.Drawing.Point(354, 205);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(328, 195);
+            this.pictureBox1.Size = new System.Drawing.Size(346, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -235,9 +235,9 @@ namespace FrmParcial
             this.groupBox_listasPasajeros.Controls.Add(this.button_verPasajeros);
             this.groupBox_listasPasajeros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox_listasPasajeros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_listasPasajeros.Location = new System.Drawing.Point(670, 3);
+            this.groupBox_listasPasajeros.Location = new System.Drawing.Point(706, 3);
             this.groupBox_listasPasajeros.Name = "groupBox_listasPasajeros";
-            this.groupBox_listasPasajeros.Size = new System.Drawing.Size(329, 195);
+            this.groupBox_listasPasajeros.Size = new System.Drawing.Size(347, 196);
             this.groupBox_listasPasajeros.TabIndex = 5;
             this.groupBox_listasPasajeros.TabStop = false;
             this.groupBox_listasPasajeros.Text = "Datos Pasajeros de un viaje";
@@ -258,9 +258,9 @@ namespace FrmParcial
             this.groupBox_AñadirCrucero.Controls.Add(this.button_crearCrucero);
             this.groupBox_AñadirCrucero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox_AñadirCrucero.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_AñadirCrucero.Location = new System.Drawing.Point(336, 405);
+            this.groupBox_AñadirCrucero.Location = new System.Drawing.Point(354, 407);
             this.groupBox_AñadirCrucero.Name = "groupBox_AñadirCrucero";
-            this.groupBox_AñadirCrucero.Size = new System.Drawing.Size(328, 196);
+            this.groupBox_AñadirCrucero.Size = new System.Drawing.Size(346, 198);
             this.groupBox_AñadirCrucero.TabIndex = 6;
             this.groupBox_AñadirCrucero.TabStop = false;
             this.groupBox_AñadirCrucero.Text = "Crear Crucero";
@@ -288,13 +288,12 @@ namespace FrmParcial
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1002, 649);
+            this.ClientSize = new System.Drawing.Size(1056, 653);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(600, 600);
+            this.MinimumSize = new System.Drawing.Size(1072, 692);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormPrincipal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

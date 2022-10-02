@@ -40,16 +40,12 @@ namespace FrmParcial
             // 
             this.button_crearPasajero.Click += new System.EventHandler(this.button_crearPasajero_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Size = new System.Drawing.Size(817, 573);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.comboBox_valija);
             this.groupBox1.Controls.Add(this.comboBox_genero);
             this.groupBox1.Controls.Add(this.comboBox1_nacion);
-            this.groupBox1.Size = new System.Drawing.Size(817, 573);
+            this.groupBox1.Text = "datos";
             this.groupBox1.Controls.SetChildIndex(this.textBox_numPasaporte, 0);
             this.groupBox1.Controls.SetChildIndex(this.textBox3_edad, 0);
             this.groupBox1.Controls.SetChildIndex(this.dateTimePicker1, 0);
@@ -65,8 +61,9 @@ namespace FrmParcial
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(0, 386);
-            this.groupBox2.Size = new System.Drawing.Size(817, 187);
+            this.groupBox2.Location = new System.Drawing.Point(0, 388);
+            this.groupBox2.Size = new System.Drawing.Size(767, 187);
+            this.groupBox2.Text = "viaje";
             // 
             // button_agregarValija
             // 
@@ -100,10 +97,10 @@ namespace FrmParcial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 573);
+            this.ClientSize = new System.Drawing.Size(767, 575);
+            this.MinimumSize = new System.Drawing.Size(783, 614);
             this.Name = "FrmPasajeTurista";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmPasajeTurista";
+            this.Text = "Pasaje Turista";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

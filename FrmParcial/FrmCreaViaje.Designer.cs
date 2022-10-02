@@ -226,9 +226,10 @@ namespace FrmParcial
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1313, 336);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(1329, 375);
             this.Name = "FrmCreaViaje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCreaViaje";
+            this.Text = "Crear viaje";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox_seleccionarDestino.ResumeLayout(false);
             this.groupBox_seleccionarDestino.PerformLayout();

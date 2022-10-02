@@ -240,7 +240,6 @@ namespace FrmParcial
             this.groupBox1.Size = new System.Drawing.Size(794, 158);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // button_ayuda
             // 
@@ -287,8 +286,9 @@ namespace FrmParcial
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 633);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(816, 672);
             this.Name = "FrmAgregaCrucero";
-            this.Text = "FrmAgregaCrucero";
+            this.Text = "Crear Crucero";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox_crucero.ResumeLayout(false);
             this.groupBox_crucero.PerformLayout();

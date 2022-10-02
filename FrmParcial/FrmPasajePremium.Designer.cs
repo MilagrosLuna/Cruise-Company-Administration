@@ -40,16 +40,12 @@ namespace FrmParcial
             // 
             this.button_crearPasajero.Click += new System.EventHandler(this.button_crearPasajero_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Size = new System.Drawing.Size(754, 575);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.comboBox_valija);
             this.groupBox1.Controls.Add(this.comboBox_genero);
             this.groupBox1.Controls.Add(this.comboBox_nacion);
-            this.groupBox1.Size = new System.Drawing.Size(754, 575);
+            this.groupBox1.Text = "datos";
             this.groupBox1.Controls.SetChildIndex(this.textBox_numPasaporte, 0);
             this.groupBox1.Controls.SetChildIndex(this.textBox3_edad, 0);
             this.groupBox1.Controls.SetChildIndex(this.dateTimePicker1, 0);
@@ -65,8 +61,7 @@ namespace FrmParcial
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(0, 360);
-            this.groupBox2.Size = new System.Drawing.Size(754, 215);
+            this.groupBox2.Text = "viaje";
             // 
             // button_agregarValija
             // 
@@ -100,10 +95,10 @@ namespace FrmParcial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 575);
+            this.ClientSize = new System.Drawing.Size(767, 575);
+            this.MinimumSize = new System.Drawing.Size(783, 614);
             this.Name = "FrmPasajePremium";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmPasajePremium";
+            this.Text = "Pasaje Premium";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

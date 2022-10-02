@@ -44,6 +44,7 @@ namespace FrmParcial
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView_viaje = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_ayuda = new System.Windows.Forms.Button();
             this.label_genero = new System.Windows.Forms.Label();
             this.button_agregarValija = new System.Windows.Forms.Button();
             this.label_Valija = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace FrmParcial
             this.radioButton_NoBolso = new System.Windows.Forms.RadioButton();
             this.label_Bolso = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button_ayuda = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_viaje)).BeginInit();
@@ -154,19 +154,18 @@ namespace FrmParcial
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(910, 596);
+            this.panel1.Size = new System.Drawing.Size(767, 575);
             this.panel1.TabIndex = 12;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView_viaje);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 381);
+            this.groupBox2.Location = new System.Drawing.Point(0, 360);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(910, 215);
+            this.groupBox2.Size = new System.Drawing.Size(767, 215);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
             // dataGridView_viaje
             // 
@@ -183,7 +182,7 @@ namespace FrmParcial
             this.dataGridView_viaje.Name = "dataGridView_viaje";
             this.dataGridView_viaje.ReadOnly = true;
             this.dataGridView_viaje.RowTemplate.Height = 25;
-            this.dataGridView_viaje.Size = new System.Drawing.Size(904, 193);
+            this.dataGridView_viaje.Size = new System.Drawing.Size(761, 193);
             this.dataGridView_viaje.TabIndex = 0;
             // 
             // groupBox1
@@ -210,10 +209,19 @@ namespace FrmParcial
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(910, 596);
+            this.groupBox1.Size = new System.Drawing.Size(767, 575);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            // 
+            // button_ayuda
+            // 
+            this.button_ayuda.Location = new System.Drawing.Point(686, 309);
+            this.button_ayuda.Name = "button_ayuda";
+            this.button_ayuda.Size = new System.Drawing.Size(75, 23);
+            this.button_ayuda.TabIndex = 37;
+            this.button_ayuda.Text = "Ayuda";
+            this.button_ayuda.UseVisualStyleBackColor = true;
+            this.button_ayuda.Click += new System.EventHandler(this.button_ayuda_Click);
             // 
             // label_genero
             // 
@@ -282,22 +290,12 @@ namespace FrmParcial
             this.label4.TabIndex = 6;
             this.label4.Text = "Nacionalidad";
             // 
-            // button_ayuda
-            // 
-            this.button_ayuda.Location = new System.Drawing.Point(686, 309);
-            this.button_ayuda.Name = "button_ayuda";
-            this.button_ayuda.Size = new System.Drawing.Size(75, 23);
-            this.button_ayuda.TabIndex = 37;
-            this.button_ayuda.Text = "Ayuda";
-            this.button_ayuda.UseVisualStyleBackColor = true;
-            this.button_ayuda.Click += new System.EventHandler(this.button_ayuda_Click);
-            // 
             // FrmVentaPasaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(910, 596);
+            this.ClientSize = new System.Drawing.Size(767, 575);
             this.Controls.Add(this.panel1);
             this.Name = "FrmVentaPasaje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
