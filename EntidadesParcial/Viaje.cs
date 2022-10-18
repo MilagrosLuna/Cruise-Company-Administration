@@ -173,6 +173,7 @@ namespace EntidadesParcial
             if (BuscarPasajero(pasajero) == false)
             {
                 this.pasajeros.Add(pasajero);
+                ok = true;
                 foreach (Bolsos item in pasajero.Equipajes)
                 {
                     this.embarcacion.CapacidadBodegaActual -= item.Peso;

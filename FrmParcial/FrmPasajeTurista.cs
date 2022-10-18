@@ -79,6 +79,14 @@ namespace FrmParcial
                         {
                             MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
+                        else
+                        {
+                            MessageBox.Show("Error, el pasajero ya esta en el viaje", "no se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, no hay espacio", "no se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -89,7 +97,16 @@ namespace FrmParcial
                         {
                             MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
+                        else
+                        {
+                            MessageBox.Show("Error, el pasajero ya esta en el viaje", "no se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("Error, no hay espacio", "no se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
 
             }

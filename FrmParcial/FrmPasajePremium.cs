@@ -82,22 +82,42 @@ namespace FrmParcial
                     Bolsos bolsomano = new Bolsos(1, Equipaje.De_Mano);
                     pasajero = pasajero + bolsomano;
                 }
-
                 if (bandera == true)
                 {
                     if (Compañia.viajesRegionales[dataGridView_viaje.CurrentCell.RowIndex].CantidadPasajeros < Compañia.viajesRegionales[dataGridView_viaje.CurrentCell.RowIndex].Embarcacion.CapacidadPasajeros)
                     {
-                        Compañia.viajesRegionales[dataGridView_viaje.CurrentCell.RowIndex].AgregarPasajero(pasajero);
-                        MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        if (Compañia.viajesRegionales[dataGridView_viaje.CurrentCell.RowIndex].AgregarPasajero(pasajero))
+                        {
+                            MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error, el pasajero ya esta en el viaje", "no se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, no hay espacio", "no se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    if(Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].CantidadPasajeros<Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].Embarcacion.CapacidadPasajeros)
+                    if (Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].CantidadPasajeros < Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].Embarcacion.CapacidadPasajeros)
                     {
-                        Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].AgregarPasajero(pasajero);
-                        MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        if (Compañia.viajesExtraRegionales[dataGridView_viaje.CurrentCell.RowIndex].AgregarPasajero(pasajero))
+                        {
+                            MessageBox.Show("Agregado exitosamente", "se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error, el pasajero ya esta en el viaje", "no se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("Error, no hay espacio", "no se pudo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
             }
         }
