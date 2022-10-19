@@ -13,12 +13,18 @@ Bueno, mi nombre es Milagros Luna, mi experiencia personal con este parcial es m
 
 ## Tabla de contenidos:
 ---
-
+- [Usuarios](#Usuarios)
 - [Diagrama de clases](#Diagrama-de-clases)
 - [Sobrecarga](#Sobrecarga)
 - [Enumerados](#Enumerados)
 - [Herencia Polimorfismo](#Heremcoa-Polimorfismo)
 - [Propuesta de valor agregado para promoción](#Propuesta-de-valor-agregado-para-promoción)
+
+## Usuarios
+---
+Usuarios Disponibles:
+
+<p align="center"><img src="https://media.discordapp.net/attachments/1011035308122456154/1032303959441936394/unknown.png"/></p> 
 
 ## Diagrama de clases
 ---
