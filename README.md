@@ -1,4 +1,6 @@
-# Friolito ventas
+<h1 align="center"><img src="https://media.discordapp.net/attachments/1011035308122456154/1032305449099329657/unknown.png"/></p> 
+
+
 
 ## Aplicación para administración de ventas de la empresa Friolito, compañía de cruceros.
 Bueno, mi nombre es Milagros Luna, mi experiencia personal con este parcial es muy grata, tuve bastante de prueba y error, pero es lo que nos ayuda a aprender, me pareció una propuesta divertida, a pesar de tener complicaciones creo que pude lograr bastante de mi objetivo.
@@ -18,11 +20,15 @@ Bueno, mi nombre es Milagros Luna, mi experiencia personal con este parcial es m
 - [Sobrecarga](#Sobrecarga)
 - [Enumerados](#Enumerados)
 - [Herencia Polimorfismo](#Heremcoa-Polimorfismo)
+- [Validaciones](#Validaciones)
 - [Propuesta de valor agregado para promoción](#Propuesta-de-valor-agregado-para-promoción)
 
 ## Usuarios
 ---
 Usuarios Disponibles:
+
+
+<p align="center"><img src="https://media.discordapp.net/attachments/1011035308122456154/1032304530769068062/unknown.png"/></p> 
 
 <p align="center"><img src="https://media.discordapp.net/attachments/1011035308122456154/1032303959441936394/unknown.png"/></p> 
 
@@ -46,8 +52,12 @@ Utilice distintos enumerados para manejar la información como, por ejemplo, la 
 ---
 También utilice herencia de clases y de forms,  la clase viaje es una clase abstracta por que no va a ser algo que se pueda instanciar solamente esta creada para manejar los datos básicos de un viaje y después tiene si es viaje regional o extra regional, los cuales contienen esos datos básicos y agregados de destino. En esta clase tengo aplicado polimorfismo al método mostrar, que después en cada tipo de viaje, utiliza el base y le agrega los datos faltantes.
 
+## Validaciones
+---
+<p align="center"><img src="https://media.discordapp.net/attachments/1011035308122456154/1032305210409898065/unknown.png?width=630&height=610"/></p> 
+
 ## Propuesta de valor agregado para promoción
 ---
-Usuario administrador capas de agregar un crucero a la ”base de datos” de la compañía
+Usuario administrador capaz de agregar un crucero a la ”base de datos” de la compañía
 <p align="center"><img src="https://media.discordapp.net/attachments/966847111742230578/1026503281134030878/unknown.png"/></p> 
 
